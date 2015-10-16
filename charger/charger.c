@@ -154,32 +154,47 @@ struct uevent {
 
 static struct frame batt_anim_frames[] = {
     {
-        .name = "charger/battery_0",
+        .name = "charger/battery_charging_01",
         .disp_time = 350,
         .min_capacity = 0,
     },
     {
-        .name = "charger/battery_1",
+        .name = "charger/battery_charging_02",
         .disp_time = 350,
         .min_capacity = 15,
     },
     {
-        .name = "charger/battery_2",
+        .name = "charger/battery_charging_03",
+        .disp_time = 350,
+        .min_capacity = 25,
+    },
+    {
+        .name = "charger/battery_charging_04",
         .disp_time = 350,
         .min_capacity = 35,
     },
     {
-        .name = "charger/battery_3",
+        .name = "charger/battery_charging_05",
         .disp_time = 350,
-        .min_capacity = 55,
+        .min_capacity = 45,
     },
     {
-        .name = "charger/battery_4",
+        .name = "charger/battery_charging_06",
+        .disp_time = 350,
+        .min_capacity = 65,
+    },
+    {
+        .name = "charger/battery_charging_07",
         .disp_time = 350,
         .min_capacity = 75,
     },
     {
-        .name = "charger/battery_5",
+        .name = "charger/battery_charging_08",
+        .disp_time = 350,
+        .min_capacity = 85,
+    },
+    {
+        .name = "charger/battery_charging_09",
         .disp_time = 350,
         .min_capacity = 95,
     },
@@ -188,7 +203,7 @@ static struct frame batt_anim_frames[] = {
 static struct animation battery_animation = {
     .frames = batt_anim_frames,
     .num_frames = ARRAY_SIZE(batt_anim_frames),
-    .num_cycles = 5,
+    .num_cycles = 8,
 };
 
 static struct charger charger_state = {
@@ -1229,7 +1244,7 @@ int main(int argc, char **argv)
     charger->uevent_fd = fd;
     coldboot(charger, "/sys/class/power_supply", "add");
 
-    ret = res_create_display_surface("charger/battery_fail", &charger->surf_unknown);
+    ret = res_create_display_surface("charger/battery_charging_warning", &charger->surf_unknown);
     if (ret < 0) {
         LOGE("Cannot load image\n");
         charger->surf_unknown = NULL;
