@@ -1,6 +1,4 @@
-# Copyright 2011 The Android Open Source Project
-
-ifneq ($(BUILD_TINY_ANDROID),true)
+# Copyright 2015 The Android Open Source Project
 
 LOCAL_PATH := $(call my-dir)
 
@@ -50,5 +48,3 @@ LOCAL_STATIC_LIBRARIES += libsuspend
 LOCAL_STATIC_LIBRARIES += libz libstdc++ libcutils liblog libm libc
 
 include $(BUILD_EXECUTABLE)
-
-endif

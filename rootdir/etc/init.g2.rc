@@ -320,7 +320,11 @@ on boot
     write /sys/devices/virtual/input/lge_touch/touch_gesture 1
 
 on charger
+    stop bootlogo
     mount_all ./fstab.g2
+
+    start rmt_storage
+    start irsc_util
 
 # Services start here
 
