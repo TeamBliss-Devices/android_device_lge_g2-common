@@ -127,3 +127,29 @@ BOARD_WLAN_DEVICE           := bcmdhd
 WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/bcmdhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA     := "/system/etc/firmware/fw_bcmdhd.bin"
 WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/fw_bcmdhd_apsta.bin"
+
+
+#LZMA compression
+WITH_LZMA_OTA:= true
+
+
+#RR Optimizations
+TARGET_TC_ROM := 5.2
+
+TARGET_TC_KERNEL := 6.0
+
+RROPTI := true
+
+RR_O3 := true
+
+RR_STRICT := true
+
+RR_GRAPHITE := true
+
+RR_KRAIT := true
+
+RR_PIPE := true
+
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+
+RR_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
