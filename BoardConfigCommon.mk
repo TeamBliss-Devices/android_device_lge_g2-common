@@ -143,3 +143,22 @@ TARGET_USES_LOGD := false
 TARGET_SPECIFIC_HEADER_PATH := device/lge/g2-common/include
 
 BOARD_USES_LEGACY_MMAP := true
+
+# BlissPop Configs
+TARGET_TC_ROM := 4.8-linaro
+TARGET_TC_KERNEL := 4.8-linaro
+BLISSIFY := true
+BLISS_O3 := true
+BLISS_STRICT := false
+BLISS_GRAPHITE := true
+BLISS_KRAIT := true
+BLISS_PIPE := true
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+WITH_LZMA_OTA := true
+TARGET_ENABLE_UKM := true
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
+TARGET_USE_KRAIT_PLD_SET := true
+
+#SaberMod
+-include vendor/bliss/config/sm.mk
