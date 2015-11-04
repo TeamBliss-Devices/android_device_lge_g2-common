@@ -13,8 +13,8 @@
   },
   {
     "remote": "github",
-    "repository": "lg-devs/proprietary_vendor_lge",
+    "repository": "TheMuppets/proprietary_vendor_lge",
     "target_path": "vendor/lge",
-    "revision": "cm-12.1-caf"
+    "revision": "cm-12.1"
   }
 ]
