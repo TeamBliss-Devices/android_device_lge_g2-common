@@ -91,7 +91,8 @@ PRODUCT_PACKAGES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-    charger_res_images
+    charger_res_g2 \
+    charger_g2
 
 # Display
 PRODUCT_PACKAGES += \
