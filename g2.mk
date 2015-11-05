@@ -212,4 +212,4 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 #Bliss Audio Mod
-BLISS_AUDIO_MOD :=viper
+BLISS_AUDIO_MOD := viper
