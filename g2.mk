@@ -53,6 +53,7 @@ PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Boot animation
+TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
@@ -123,7 +124,6 @@ PRODUCT_PACKAGES += \
     init.g2.power.rc \
     init.g2.usb.rc \
     init.recovery.g2.rc \
-    panel.sh \
     set_baseband.sh \
     ueventd.g2.rc
 
@@ -190,9 +190,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_g2
 
-# RIL symbols
+# RIL
 PRODUCT_PACKAGES += \
-    liblge
+    libril_shim
 
 # Sensors
 PRODUCT_COPY_FILES += \

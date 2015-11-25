@@ -31,6 +31,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true
 
+# GPS
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.gps.qc_nlp_in_use=0 \
+    ro.gps.agps_provider=1
+
 # IO Scheduler
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=bfq
@@ -77,7 +82,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
-    ro.telephony.ril_class=LgeLteRIL
+    ro.ril.telephony.mqanelements=5
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -116,10 +121,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.qualcomm.sns.libsensor1=e \
     persist.debug.sensors.hal=e \
     persist.debug.ar.hal=e
-
-# USB
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
